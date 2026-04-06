@@ -60,6 +60,16 @@ Supported image formats: `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tif`, `.tiff`
 The images in the `seals` directory show real seal-removal results, including cases where seals overlap printed text and handwritten text.  
 For these processed outputs, you can directly send them to a VLM (Vision-Language Model) to extract the target information.
 
+For example, if `seals/4-1421-2339-1905-2779.png` is sent to Deepseek-OCR2, the extraction result is shown below:
+
+Input image:
+
+![Seal Removal Example Input](seals/4-1421-2339-1905-2779.png)
+
+Deepseek-OCR2 extraction result:
+
+![Deepseek-OCR2 Extraction Result](readmes/K1O3I0S@0NVYY@NUKOEB86V.png)
+
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests to improve the algorithm or add new features.
