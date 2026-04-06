@@ -4,7 +4,8 @@ This repository contains an implementation of a pure computer vision algorithm d
 
 ## Features
 
-- **Seal Detection**: Identifies the location of seals in the image.
+- **Seal Detection**: Identifies the location of seals in the image.  
+  Note: The `detect_seal_boxes` function in this project may not be sufficiently robust for complex real-world cases. For better results, it is recommended to use a deep-learning-based detector, such as `PaddleOCR`'s seal detection model or a fine-tuned variant.
 - **Seal Removal**: Removes the detected seals while maintaining the integrity of the original image.
 - **No Machine Learning**: The algorithm is purely based on traditional computer vision techniques, without relying on pre-trained models.
 
@@ -53,6 +54,11 @@ Arguments:
 - `--padding`: Expansion pixels for detected seal boxes. Default: `8`
 
 Supported image formats: `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tif`, `.tiff`
+
+## Results
+
+The images in the `seals` directory show real seal-removal results, including cases where seals overlap printed text and handwritten text.  
+For these processed outputs, you can directly send them to a VLM (Vision-Language Model) to extract the target information.
 
 ## Contributing
 
