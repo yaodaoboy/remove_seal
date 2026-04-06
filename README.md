@@ -6,7 +6,8 @@ This repository contains an implementation of a pure computer vision algorithm d
 
 - **Seal Detection**: Identifies the location of seals in the image.  
   Note: The `detect_seal_boxes` function in this project may not be sufficiently robust for complex real-world cases. For better results, it is recommended to use a deep-learning-based detector, such as [PaddleOCR](https://paddlepaddle.github.io/PaddleX/3.1/pipeline_usage/tutorials/ocr_pipelines/seal_recognition.html)'s seal detection model or a fine-tuned variant.
-- **Seal Removal**: Removes the detected seals while maintaining the integrity of the original image.
+- **Seal Removal**: Removes the detected seals while maintaining the integrity of the original image.  
+  Note: In `remove_seal_from_image`, directly replacing seal pixels with `(255, 255, 255)` may not always produce natural results. A better strategy is to replace those regions using the average color computed from the four corners of the input image.
 - **No Machine Learning**: The algorithm is purely based on traditional computer vision techniques, without relying on pre-trained models.
 
 ## Requirements
